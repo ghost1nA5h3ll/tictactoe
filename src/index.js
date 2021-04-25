@@ -11,8 +11,11 @@ class Square extends React.Component {
     }
     render() {
       return (
-        <button className="square" onClick={(){alert("click"); }}>
-          {this.props.value}
+        <button 
+            className="square" 
+            onClick={() => {this.setState({value: 'X'}) }}
+        >
+          {this.state.value}
         </button>
       ); //this.props.value can get the passed in value from the Board component
     }
