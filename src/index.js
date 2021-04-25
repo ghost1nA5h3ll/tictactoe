@@ -2,17 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
-    render() {
+function Square(props){
       return (
         <button 
             className="square" 
-            onClick={() => {this.props.onClick()}}
+            onClick={props.onClick}
         >
-          {this.props.value}
+          {props.value}
         </button>
       ); //this.props.value can get the passed in value from the Board component
-    }
   }
   
   class Board extends React.Component {
