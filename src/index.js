@@ -5,7 +5,7 @@ import './index.css';
 class Square extends React.Component {
     render() {
       return (
-        <button className="square">
+        <button className="square" onClick={function(){alert("click"); }}>
           {this.props.value}
         </button>
       ); //this.props.value can get the passed in value from the Board component
